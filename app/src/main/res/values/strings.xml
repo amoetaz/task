@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">task</string>
+    <string name="unauthorized_user">Unauthorized user</string>
+    <string name="server_error">Server error</string>
+    <string name="unexpected_error">Unexpected error</string>
+    <string name="bad_request">Bad request</string>
+    <string name="request_not_found">request not found</string>
+    <string name="not_connected_to_network">Not connected to network</string>
+</resources>

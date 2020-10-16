@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ui.DetailActivity">
+
+            <ImageView
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/iv_image"
+                tools:src="@color/colorAccent"
+                android:layout_width="0dp"
+                android:layout_height="200dp" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:text="vnfvj vjfvn"
+                android:layout_marginStart="20dp"
+                app:layout_constraintTop_toBottomOf="@id/iv_image"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/tv_fats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:text="vnfvj vjfvn"
+                android:layout_marginStart="20dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_fats"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/tv_calories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:text="vnfvj vjfvn"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_calories"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/tv_desc"
+                android:gravity="start"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
