@@ -43,11 +43,9 @@ class RecipesListAdapter(val recipes: ArrayList<Recipe>, val context: Context) :
         val recipe = recipes[position]
         Glide.with(context).load(recipe.image).into(holder.image)
 
-
-        recipes.sortBy { t -> t.image }
         holder.name.text = recipe.name
 
-        setAnimation(position , holder)
+        setAnimation(position, holder)
         holder.itemView.setOnClickListener {
             val intent = Intent(context, DetailActivity::class.java)
             intent.putExtra("recipe", Utils.convertObjectToJson(recipe))
@@ -55,28 +53,28 @@ class RecipesListAdapter(val recipes: ArrayList<Recipe>, val context: Context) :
         }
     }
 
-    fun sortBy(type : SortType) =
-        when(type){
-            SortType.fat ->{
-                val sortedList = recipes.sortedWith(compareBy { it.fatInt  })
-                setData(sortedList )
+    fun sortBy(type: SortType) =
+        when (type) {
+            SortType.fat -> {
+                val sortedList = recipes.sortedWith(compareBy { it.fatInt })
+                setData(sortedList)
 
             }
             SortType.calories -> {
                 val sortedList = recipes.sortedWith(compareBy { it.caloriesInt })
                 setData(sortedList)
             }
-            else ->{
+            else -> {
                 setData(recipes)
             }
         }
+
 
     fun clearData() {
         if (recipes.size > 0) {
             recipes.clear()
         }
     }
-
 
 
     fun filter(name: String) {
@@ -92,7 +90,7 @@ class RecipesListAdapter(val recipes: ArrayList<Recipe>, val context: Context) :
     }
 
     // set animation slide left and right
-    fun setAnimation(position: Int , holder: MyViewHolder){
+    fun setAnimation(position: Int, holder: MyViewHolder) {
         val slideLeft = AnimationUtils.loadAnimation(context, R.anim.slide_right)
         val slideright = AnimationUtils.loadAnimation(context, R.anim.slide_left)
         if (position % 2 == 0)

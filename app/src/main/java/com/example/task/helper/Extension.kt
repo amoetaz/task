@@ -12,7 +12,7 @@ fun <T> Call<T>.start(listener: BaseResponseListener<T>) {
 //remvoe g and convert it to int for soring
 fun String.fatsToInt() : Int{
     try {
-        return this.replace(" g" , "").toInt()
+        return this.trim().replace(" g" , "").toInt()
     } catch (e: NumberFormatException) {
         return 0
     }
@@ -21,7 +21,7 @@ fun String.fatsToInt() : Int{
 //remvoe kcal and convert it to int for soring
 fun String.caloriesToInt() : Int{
     try {
-        return this.replace(" kcal" , "").toInt()
+        return this.trim().replace(" kcal" , "").toInt()
     } catch (e: NumberFormatException) {
         return 0
     }

@@ -35,12 +35,8 @@ data class Recipe(
     var time: String
 ){
     var fatInt : Int = 0
-    set(value){
-        field = fats.fatsToInt()
-    }
+    get() = fats.fatsToInt()
 
     var caloriesInt : Int = 0
-        set(value){
-            field = calories.caloriesToInt()
-        }
+    get() = calories.caloriesToInt()
 }
